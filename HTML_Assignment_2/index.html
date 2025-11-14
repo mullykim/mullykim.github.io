@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Laurea University of Applied Sciences</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        margin: 20px;
+      }
+      header,
+      nav,
+      section,
+      footer {
+        background-color: #f9f9f9;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+      }
+      h1,
+      h2 {
+        color: #000000;
+      }
+      .form-group {
+        margin-bottom: 10px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .logo img {
+        height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header style="background-color: #f0f0f0">
+      <h1>Laurea University of Applied Sciences</h1>
+      <a href="#form" style="margin-right: 20px">Application Form</a>
+      <a href="#quote" style="margin-right: 20px">Quote</a>
+      <a href="#laurea-media">Laurea Media</a>
+    </header>
+
+    <!-- Application Form Section -->
+    <section id="form">
+      <h2>Student Assistant Job Application</h2>
+      <form
+        action="/submit"
+        method="POST"
+        autocomplete="on"
+        aria-label="Student Assistant Application Form"
+      >
+        <!-- Full Name -->
+        <div
+          class="form-group"
+          style="display: flex; align-items: center; gap: 10px"
+        >
+          <label for="fullname">Full Name:</label>
+          <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            placeholder="Jane Student"
+            required
+            minlength="3"
+            maxlength="50"
+            pattern="[A-Za-z\s]+"
+            style="width: 200px"
+          />
+        </div>
+
+        <!-- Email -->
+        <div
+          class="form-group"
+          style="display: flex; align-items: center; gap: 10px"
+        >
+          <label for="email">Email:</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="you@student.laurea.fi"
+            required
+            pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+            style="width: 200px"
+          />
+        </div>
+
+        <!-- Password -->
+        <div
+          class="form-group"
+          style="display: flex; align-items: center; gap: 10px"
+        >
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            style="width: 200px"
+          />
+        </div>
+
+        <!-- Number -->
+        <div
+          class="form-group"
+          style="display: flex; align-items: center; gap: 10px"
+        >
+          <label for="experience" style="min-width: 200px"
+            >Years of Experience:</label
+          >
+          <input
+            type="number"
+            id="experience"
+            name="experience"
+            min="0"
+            max="40"
+            style="width: 200px"
+          />
+        </div>
+
+        <!-- Salary Range -->
+        <div
+          class="form-group"
+          style="display: flex; align-items: center; gap: 10px"
+        >
+          <label for="salary">Expected Salary Range:</label>
+          <input
+            type="range"
+            id="salary"
+            name="salary"
+            min="1000"
+            max="5000"
+            step="100"
+            style="width: 200px"
+          />
+        </div>
+
+        <!-- Job Preferences -->
+        <div class="form-group">
+          <label>Job Preferences:</label>
+          <div>
+            <input type="checkbox" name="preferences" value="remote" /> Remote
+            Work
+          </div>
+          <div>
+            <input type="checkbox" name="preferences" value="campus" /> On
+            Campus
+          </div>
+          <div>
+            <input type="checkbox" name="preferences" value="parttime" />
+            Part-Time
+          </div>
+        </div>
+
+        <!-- Job Type -->
+        <div class="form-group">
+          <label>Job Type:</label>
+          <div>
+            <input type="radio" name="jobtype" value="assistant" /> Student
+            Assistant
+          </div>
+          <div>
+            <input type="radio" name="jobtype" value="internship" /> Internship
+          </div>
+        </div>
+
+        <!-- Department Dropdown -->
+        <div
+          class="form-group"
+          style="display: flex; align-items: center; gap: 10px"
+        >
+          <label for="department">Department:</label>
+          <select id="department" name="department" style="width: 200px">
+            <option value="it" selected>Information Technology</option>
+            <option value="business">Business Administration</option>
+            <option value="nursing">Nursing</option>
+          </select>
+        </div>
+
+        <!-- Campus Preference -->
+        <div
+          class="form-group"
+          style="display: flex; align-items: center; gap: 10px"
+        >
+          <label for="campus">Campus Preference:</label>
+          <input
+            list="campuses"
+            name="campus"
+            id="campus"
+            style="width: 200px"
+          />
+          <datalist id="campuses">
+            <option value="Leppävaara"></option>
+            <option value="Tikkurila"></option>
+            <option value="Otaniemi"></option>
+          </datalist>
+        </div>
+
+        <!-- Motivation Letter -->
+        <div class="form-group">
+          <label for="motivation">Motivation letter:</label>
+          <textarea
+            id="motivation"
+            name="motivation"
+            rows="5"
+            cols="40"
+            placeholder="Why would you like to work with us? style="
+          ></textarea>
+        </div>
+
+        <!-- Referral Code (disabled) -->
+        <div
+          class="form-group"
+          style="display: flex; align-items: center; gap: 10px"
+        >
+          <label for="referral">Referral Code:</label>
+          <input
+            type="text"
+            id="referral"
+            value="LAUREAREF123"
+            disabled
+            style="width: 200px"
+          />
+        </div>
+
+        <!-- Application ID (readonly) -->
+        <div
+          class="form-group"
+          style="display: flex; align-items: center; gap: 10px"
+        >
+          <label for="appid">Application ID:</label>
+          <input
+            type="text"
+            id="appid"
+            value="LAU2025APP"
+            readonly
+            style="width: 200px"
+          />
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group" style="text-align: left">
+          <input type="submit" value="Send Application" style="width: 160px" />
+        </div>
+      </form>
+    </section>
+
+    <!-- Quote Section -->
+    <aside id="quote">
+      <blockquote>
+        "The future belongs to those who believe in the beauty of their dreams."
+        – Eleanor Roosevelt
+      </blockquote>
+    </aside>
+
+    <!-- Media Section -->
+    <div id="Laurea-media">
+      <h2>Laurea Media</h2>
+
+      <article class="logo">
+        <figure>
+          <img src="laurea-vaakalogo_rgb.png" alt="Laurea Logo" />
+          <figcaption>Official Laurea Logo</figcaption>
+        </figure>
+      </article>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <p>
+        &copy; 2025 Laurea University of Applied Sciences. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>
