@@ -1,0 +1,287 @@
+/* ========== RESET DEFAULTS ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+}
+
+header a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  color: #004080;
+}
+
+/* ========== 2.1 Type Selectors ========== */
+h1 {
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  font-size: 2em;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+aside {
+  text-align: center;
+  margin: 20px auto;
+  color: red;
+}
+
+form {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+p {
+  font-size: 14px;
+  color: #666;
+}
+
+nav {
+  text-align: center;
+  margin: 15px 0;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ========== 2.2 Class Selectors ========== */
+.form-section {
+  background-color: #ffffff;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 15px;
+  width: 80%;
+  text-align: center;
+}
+
+/* ========== 2.3 ID Selectors ========== */
+#main-title {
+  color: #004080;
+  margin-bottom: 20px;
+}
+
+/* ========== 2.4 Multiple Class Selectors ========== */
+.green.bold {
+  color: green;
+  font-weight: bold;
+}
+
+/* ========== 2.5 Attribute Selectors ========== */
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="range"],
+select,
+input[list] {
+  border: 1px solid #ccc;
+  margin: 5px 10px;
+  padding: 5px 10px;
+  width: 200px;
+}
+
+img[src="laurea-logo"] {
+  border: 1px solid #004080;
+  border-radius: 20px;
+  height: 100px;
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ========== 2.6 Descendant Combinators ========== */
+.form-section label {
+  display: block;
+  text-align: left;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+section .main-list {
+  list-style-type: square;
+  background-color: #f0f8ff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.main-list li {
+  margin-left: 20px;
+  color: #444;
+  padding: 5px 0;
+}
+
+/* ========== 2.7 Multiple Selectors ========== */
+h1,
+h2,
+.menu {
+  color: #222;
+  font-family: Verdana, sans-serif;
+}
+
+/* ========== 2.8 Chaining ========== */
+h1.title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ========== 2.9 Pseudo-classes ========== */
+.Laurea:hover {
+  opacity: 0.7;
+  transform: scale(1.4);
+  transition: all 0.3s ease;
+}
+
+.Laurea:active {
+  transform: scale(0.1);
+}
+
+.Visit-Laurea:visited {
+  color: red;
+}
+
+input:focus {
+  border-color: #004080;
+  outline: none;
+  background-color: #e6f6ff;
+}
+
+input:disabled {
+  background-color: #eee;
+  color: #999;
+}
+
+/* ========== 2.10 Type + Attribute Selector ========== */
+input[type="submit"] {
+  background-color: #004080;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  width: 160px;
+}
+
+/* ========== 2.11 Type + Attribute + Pseudo-class ========== */
+input[type="submit"]:hover {
+  background-color: lightcoral;
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
+
+/* ========== 3. VISUAL RULES ========== */
+body {
+  background-color: #fafafa;
+  color: #333;
+  opacity: 0.98;
+  background-image: none !important; /* single use of !important */
+}
+
+/* Motivation textarea */
+textarea {
+  width: 100%;
+  min-width: 100px;
+  min-height: 120px;
+  max-height: 300px;
+  padding: 10px;
+  border: 2px solid #bbb;
+  border-radius: 4px;
+  overflow: auto;
+  background-color: #fff;
+}
+
+/* Quote block */
+#quote {
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  max-width: 600px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* ========== 3. VISIBILITY ========== */
+.hidden-logo {
+  visibility: hidden;
+}
+
+/* ========== CUSTOM FIXES FOR INLINE REMOVAL ========== */
+
+/* General form groups (labels + inputs inline) */
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* Checkbox groups aligned left */
+.form-group.checkbox-group {
+  display: block;
+  text-align: left;
+  margin-left: 0;
+}
+
+.form-group.checkbox-group div {
+  display: block;
+  margin: 6px 0;
+}
+
+.form-group input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* Radio groups aligned left */
+.form-group.radio-group {
+  display: block;
+  text-align: left;
+  margin-left: 0;
+}
+
+.form-group.radio-group div {
+  display: block;
+  margin: 6px 0;
+}
+
+.form-group input[type="radio"] {
+  margin-right: 8px;
+}
+
+/* Center Laurea media section */
+#Laurea-media {
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Logo size same as original */
+.logo img {
+  height: 150px;
+}
+
+/* Header link spacing */
+header a {
+  margin-right: 20px;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  height: 150px;
+}
