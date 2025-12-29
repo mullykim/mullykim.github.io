@@ -1,0 +1,26 @@
+/* Global styling */
+body {
+  scroll-behavior: smooth;
+  font-family: "Segoe UI", sans-serif;
+  padding-top: 70px; /* Prevent navbar overlap */
+}
+
+/* Section titles */
+.section-title {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Cards */
+.card {
+  border-radius: 12px;
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+}

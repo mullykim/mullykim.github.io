@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>David Muli Portfolio</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">David Muli Portfolio</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= JUMBOTRON SECTION ================= -->
+    <section class="py-5 bg-light mb-4">
+      <div class="container py-5">
+        <div
+          class="row align-items-center g-0 p-4 bg-white rounded-3 shadow-sm"
+        >
+          <!-- Left: Text -->
+          <div class="col-md-7">
+            <h1 class="display-5 fw-bold mb-3">Welcome to My Portfolio</h1>
+
+            <p class="fs-5 text-muted mb-4">
+              I design and build modern, responsive digital experiences. Explore
+              my work, skills, and creative projects below.
+            </p>
+
+            <a href="#projects" class="btn btn-primary btn-lg">
+              <i class="bi bi-folder2-open me-2"></i>
+              View My Work
+            </a>
+          </div>
+
+          <!-- Right: Image -->
+          <div class="col-md-5 text-center mt-4 mt-md-0">
+            <img
+              src="michal-parzuchowski-Nh4Sxasye24-unsplash.jpg"
+              class="img-fluid rounded-3 shadow-sm w-100"
+              alt="Profile or Hero Image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4 section-title">About Me</h2>
+
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <img
+                src="David Muli Photo.jpg"
+                class="img-fluid w-25 mx-auto d-block rounded-3"
+                alt="Profile Image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Hi, I'm David</h5>
+                <p class="card-text">
+                  I am passionate about design, technology, and creating
+                  meaningful digital experiences. This portfolio showcases my
+                  work, skills, and projects.
+                </p>
+                <span class="badge bg-primary">Designer</span>
+                <span class="badge bg-success">Developer</span>
+                <span class="badge bg-info">Creator</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS SECTION ================= -->
+    <section id="skills" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-4 section-title">Skills</h2>
+
+        <div class="accordion" id="skillsAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+              >
+                Web Development
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#skillsAccordion"
+            >
+              <div class="accordion-body">
+                <p>HTML, CSS, Bootstrap 5</p>
+                <div class="progress mb-2">
+                  <div class="progress-bar bg-success" style="width: 90%">
+                    90%
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+              >
+                UI/UX Design
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#skillsAccordion"
+            >
+              <div class="accordion-body">
+                <p>Wireframing, Prototyping, User Research</p>
+                <div class="progress mb-2">
+                  <div class="progress-bar bg-info" style="width: 80%">80%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS SECTION ================= -->
+    <section id="projects" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4 section-title">Projects</h2>
+
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <!-- Clickable Card -->
+            <a
+              href="https://github.com/mullykim/mullykim.github.io"
+              target="_blank"
+              class="text-decoration-none"
+            >
+              <div class="card shadow-sm project-card">
+                <img
+                  src="GitHub-logo-38d2943f3b1071154ea4972ac0b6c296.png"
+                  class="card-img-top img-fluid"
+                  alt="Project Thumbnail"
+                />
+
+                <div class="card-body">
+                  <h5 class="card-title">My GitHub Projects</h5>
+                  <p class="card-text text-muted">
+                    Click to explore my repositories, code samples, and ongoing
+                    work.
+                  </p>
+
+                  <button class="btn btn-primary w-100">
+                    <i class="bi bi-github me-2"></i>
+                    Visit My GitHub
+                  </button>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS SECTION ================= -->
+    <section id="testimonials" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-4 section-title">Testimonials</h2>
+
+        <div class="row g-4">
+          <!-- Testimonial 1 -->
+          <div class="col-md-4">
+            <div class="card shadow-sm p-3 text-center">
+              <!-- Circle Image -->
+              <img
+                src="michael-dam-mEZ3PoFGs_k-unsplash.jpg"
+                class="rounded-circle img-fluid mb-3"
+                style="width: 100px; height: 100px; object-fit: cover"
+                alt="Michael Dam"
+              />
+
+              <p>Amazing work! Highly recommended.</p>
+              <h6 class="text-end">– Michael Dam</h6>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="col-md-4">
+            <div class="card shadow-sm p-3 text-center">
+              <!-- Circle Image -->
+              <img
+                src="wellington-ferreira-72TE8cWKXRY-unsplash.jpg"
+                class="rounded-circle img-fluid mb-3"
+                style="width: 100px; height: 100px; object-fit: cover"
+                alt="Wellington Ferreira"
+              />
+
+              <p>Professional, creative, and reliable.</p>
+              <h6 class="text-end">– Wellington Ferreira</h6>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="col-md-4">
+            <div class="card shadow-sm p-3 text-center">
+              <!-- Circle Image -->
+              <img
+                src="abhishek-rai-eucPfcmTQig-unsplash.jpg"
+                class="rounded-circle img-fluid mb-3"
+                style="width: 100px; height: 100px; object-fit: cover"
+                alt="Abhishek Rai"
+              />
+
+              <p>"Delivered beyond expectations."</p>
+              <h6 class="text-end">– Abhishek Rai</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4 section-title">Contact Me</h2>
+
+        <form class="mx-auto" style="max-width: 600px">
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" placeholder="Your name" />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="Your email" />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea
+              class="form-control"
+              rows="4"
+              placeholder="Your message"
+            ></textarea>
+          </div>
+
+          <button class="btn btn-primary w-100">
+            <i class="bi bi-send-fill me-2"></i>
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-dark text-white text-center py-3">
+      <p class="mb-0">© 2025 David Muli Portfolio. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
