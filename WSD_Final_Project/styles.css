@@ -1,0 +1,132 @@
+/* Global styling */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* About page image */
+.about-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+}
+
+/* Footer icons */
+footer i:hover {
+  color: #0d6efd;
+  transition: 0.3s;
+}
+
+/* Base state: all slides stacked */
+.carousel-item {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Active slide (front card) */
+.carousel-item.active {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+  z-index: 5;
+}
+
+/* Incoming slide (next card) — appears BEFORE active card fades */
+.carousel-item-next.carousel-item-start,
+.carousel-item-prev.carousel-item-end {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 6; /* bring forward */
+}
+
+/* Outgoing slide (current card) — fades AFTER next card appears */
+.carousel-item.active.carousel-item-start,
+.carousel-item.active.carousel-item-end {
+  opacity: 0;
+  transform: scale(0.85);
+  z-index: 4;
+}
+
+/* Testimonial card styling */
+.testimonial-card {
+  width: 320px;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.testimonial-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* Luxury Color Palette */
+.text-ivory {
+  color: #f8f5f0;
+}
+
+.btn-gold {
+  background-color: #d4af37;
+  color: #1a1a1a;
+  border: none;
+}
+
+.btn-gold:hover {
+  background-color: #c19c2f;
+  color: #fff;
+}
+
+/* Hero Section Gradient */
+.hero-section {
+  min-height: 90vh;
+  background: linear-gradient(135deg, #2e2e2e 0%, #3a4750 50%, #4b4b4b 100%);
+  padding: 60px 0;
+}
+
+/* Hero Image Styling */
+.hero-image {
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.fade-in.delay-1 {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Trusted By Line */
+.trusted-by {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.text-gold {
+  color: #d4af37 !important;
+}
